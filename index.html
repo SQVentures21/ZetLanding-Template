@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/vyn4bpu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Zet Landing</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="first">
+        <img
+          class="zoom-in-zoom-out"
+          src="assets/zetcasino_games_2x_desktop_new.webp"
+          alt=""
+        />
+
+        <div class="animated-text">
+          <div class="wrapper-2">
+            <div class="marqueee">
+              <p class="animated-text-p">The experience</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="animated-text-1">
+          <div class="wrapper-2">
+            <div class="marqueee">
+              <p class="animated-text-p">taking over the world!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="animated-text-2">
+          <div class="wrapper">
+            <div class="marquee">
+              <p class="animated-text-p2">
+                Players from New Zealand are WILD about this !
+              </p>
+              <p class="animated-text-p2">
+                Players from New Zealand are WILD about this !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="animated-text-3">
+          <div class="wrapper">
+            <div class="marquee">
+              <p>
+                Exclusive Offer <span class="yellow">Reviewed</span> by
+                <span class="yellow"> AskGamblers </span> Live Casino
+                <span class="yellow">Tournaments </span> prizes
+                <span class="yellow">VIP program </span> generous RTP
+                <span class="yellow"> thousands of slots </span>
+              </p>
+              <p>
+                Exclusive Offer <span class="yellow">Reviewed</span> by
+                <span class="yellow"> AskGamblers </span>
+                Live Casino <span class="yellow">Tournaments </span> prizes
+                <span class="yellow">VIP program </span> generous RTP
+                <span class="yellow"> thousands of slots </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="second flex-main">
+        <img src="assets/sus (1).jpg" alt="" class="upper" />
+
+        <div class="flex">
+          <div class="flex-mobile">
+            <img class="logo" src="assets/new zealand-logo.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="centred-container">
+          <div class="main-text flex">
+            <h1 class="main-text-h1">get 125% INSTANT <br />bonus</h1>
+          </div>
+
+          <div class="steps">
+            <div class="step1">
+              <img
+                class="img-step-lighten"
+                src="assets/step-1.png"
+                alt=""
+                width="80px;"
+                height="80px;"
+              />
+              <img
+                class="step-number-image-1"
+                src="assets/number-1.png"
+                alt=""
+              />
+              <p class="step-p abs-1">
+                Create <br />
+                account
+              </p>
+            </div>
+
+            <div class="step2">
+              <img
+                class="img-step-lighten"
+                src="assets/step-2.png"
+                alt=""
+                width="80px;"
+                height="80px;"
+              />
+              <img
+                class="step-number-image-2"
+                src="assets/number-2.png"
+                alt=""
+              />
+              <p class="step-p abs-2">Make <br />deposit</p>
+            </div>
+
+            <div class="step3">
+              <img
+                class="img-step-lighten"
+                src="assets/step-3.png"
+                alt=""
+                width="80px;"
+                height="80px;"
+              />
+              <img
+                class="step-number-image-2"
+                src="assets/number-3.png"
+                alt=""
+              />
+              <p class="step-p abs-3">
+                Get <br />
+                bonus
+              </p>
+            </div>
+          </div>
+
+          <div class="offer flex">
+            <p class="offer-p">Limited Offer</p>
+          </div>
+
+          <div class="count-down flex">
+            <div class="container-2">
+              <div class="count border">
+                <div class="day-container">
+                  <h3 class="day"></h3>
+                  <h3 class="day-text">Day</h3>
+                </div>
+
+                <div class="count-dots">
+                  <p>:</p>
+                </div>
+
+                <div class="hour-container">
+                  <h3 class="hour"></h3>
+                  <h3 class="day-text">Hour</h3>
+                </div>
+
+                <div class="count-dots">
+                  <p>:</p>
+                </div>
+
+                <div class="minute-container">
+                  <h3 class="minute"></h3>
+                  <h3 class="day-text">Minute</h3>
+                </div>
+
+                <div class="count-dots">
+                  <p>:</p>
+                </div>
+
+                <div class="second-container">
+                  <h3 class="seconds color-second"></h3>
+                  <h3 class="day-text">Seconds</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            const countDown = () => {
+              const countDate = new Date(
+                "January 20 , 2022 00:00:00"
+              ).getTime();
+              const now = new Date().getTime();
+              const gap = countDate - now;
+
+              const second = 1000;
+              const minute = second * 60;
+              const hour = minute * 60;
+              const day = hour * 24;
+
+              const textDay = Math.floor(gap / day);
+              const textHour = Math.floor((gap % day) / hour);
+              const textMinutes = Math.floor((gap % hour) / minute);
+              const textSeconds = Math.floor((gap % minute) / second);
+
+              function prependZero(textSeconds) {
+                if (textSeconds < 10) return "0" + textSeconds;
+                else return textSeconds;
+              }
+
+              function prependZero1(textMinutes) {
+                if (textMinutes < 10) return "0" + textMinutes;
+                else return textMinutes;
+              }
+
+              function prependZero2(textHour) {
+                if (textHour < 10) return "0" + textHour;
+                else return textHour;
+              }
+
+              function prependZero3(textDay) {
+                if (textDay < 10) return "0" + textDay;
+                else return textDay;
+              }
+
+              document.querySelector(".day").innerText = prependZero3(textDay);
+              document.querySelector(".hour").innerText =
+                prependZero2(textHour);
+              document.querySelector(".minute").innerText =
+                prependZero1(textMinutes);
+              document.querySelector(".seconds").innerText =
+                prependZero(textSeconds);
+            };
+
+            setInterval(countDown, 1000);
+          </script>
+
+          <div class="main-button flex">
+            <a class="button-r" href="">Play Now</a>
+          </div>
+        </div>
+
+        <div class="top-text-animation-tablet">
+          <div class="wrapper">
+            <div class="marquee delay-tablet">
+              <p>
+                Exclusive Offer <span class="yellow">Reviewed</span> by
+                <span class="yellow"> AskGamblers </span> Live Casino
+                <span class="yellow">Tournaments </span> prizes
+                <span class="yellow">VIP program </span> generous RTP
+                <span class="yellow"> thousands of slots </span>
+              </p>
+              <p>
+                Exclusive Offer <span class="yellow">Reviewed</span> by
+                <span class="yellow"> AskGamblers </span>
+                Live Casino <span class="yellow">Tournaments </span> prizes
+                <span class="yellow">VIP program </span> generous RTP
+                <span class="yellow"> thousands of slots </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="payments flex">
+          <picture>
+            <source
+              media="(max-width:600px)"
+              srcset="assets/payment-logos_mobile.svg"
+            />
+            <img
+              class="payments-img"
+              src="assets/payment-logos_desktop.svg"
+              alt=""
+            />
+          </picture>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,743 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none !important;
+}
+/* 
+utility class */
+.container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0px !important;
+  display: flex;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+background animation */
+
+.zoom-in-zoom-out {
+  width: 50vw;
+  min-height: 850px;
+  max-height: 100vh;
+  animation: zoom-in-zoom-out 17s ease-out infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.03, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* text-slider animation */
+/* 
+text postion over image */
+
+.first {
+  position: relative;
+  display: inline-block;
+  height: 100vh;
+}
+
+.first > .animated-text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  border-radius: 5px;
+  transform: translate(54%, 50%);
+  text-align: center;
+  top: 20px; /* Adjust this value to move the positioned div up and down */
+
+  color: #fff;
+  max-width: 750px;
+  height: 130px;
+  padding-top: 3px;
+  width: 45%; /* Set the width of the positioned div */
+  text-transform: uppercase;
+}
+
+.first > .animated-text-1 {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  transform: translate(22%, 50%);
+  text-align: center;
+  top: 73px; /* Adjust this value to move the positioned div up and down */
+  color: #fff;
+  max-width: 750px;
+  height: 130px;
+  padding-top: 3px;
+  text-transform: uppercase;
+  width: 65%; /* Set the width of the positioned div */
+}
+
+.animated-text-p {
+  animation: neon 0.2s ease-in-out infinite alternate;
+  text-align: center;
+  background-color: black;
+  color: rgb(247, 205, 40);
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 21px rgba(247, 206, 40, 0.52),
+      0 0 34px rgba(247, 206, 40, 0.445), 0 0 54px rgba(247, 206, 40, 0.561);
+  }
+  to {
+    text-shadow: 0 0 22px rgba(247, 206, 40, 0.425),
+      0 0 38px rgba(247, 206, 40, 0.349), 0 0 60px rgba(247, 206, 40, 0.466);
+  }
+}
+
+.animated-text-p2 {
+  color: black;
+}
+
+.first > .animated-text-2 {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  bottom: 120px;
+  background-color: rgb(247, 205, 40);
+  color: rgb(0, 0, 0);
+  transform: translate(10%, 50%);
+  max-width: 750px;
+  width: 80%; /* Set the width of the positioned div */
+  border-radius: 2px;
+  height: auto;
+  padding-top: 3px;
+  color: black !important;
+}
+
+.first > .animated-text-3 {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  bottom: 70px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  transform: translate(10%, 50%);
+  max-width: 750px;
+  width: 80%; /* Set the width of the positioned div */
+  border-radius: 2px;
+  height: auto;
+  padding-top: 3px;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  width: 96%;
+  padding-top: 4px;
+  margin: 0 auto;
+  white-space: nowrap;
+  font-family: bd-brick, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 28px;
+  text-transform: uppercase;
+
+  height: 48px;
+}
+
+.wrapper-2 {
+  font-size: 50px;
+  height: 100px;
+  font-family: bd-brick, sans-serif;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+.delay {
+  animation: marquee 20s linear infinite !important;
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* container right on desktop , full size < 1200px */
+
+.second {
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  z-index: 9999;
+  height: 100vh;
+}
+
+.upper {
+  width: 48vw;
+  margin-left: 20px;
+  margin-top: -36px;
+  position: relative;
+}
+
+/* 
+main centred container  */
+.centred-container {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  height: 189px;
+  width: 225px;
+}
+
+.main-text {
+  margin-bottom: 32px;
+}
+
+.main-text-h1 {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fed22a;
+  text-transform: uppercase;
+}
+
+.offer-p {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #686b6c;
+}
+
+.offer {
+  margin-bottom: 32px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.step1,
+.step2,
+.step3 {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 80px;
+  position: relative;
+  width: 176px;
+}
+
+.step1,
+.step2,
+.step3 > p {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.step-p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: absolute;
+  bottom: 20px;
+  top: 20px;
+}
+
+.step-number-image-1 {
+  width: 58px;
+  height: 80px;
+  margin-left: 33px;
+}
+
+.step-number-image-2 {
+  width: 58px;
+  height: 80px;
+  margin-left: 38px;
+}
+
+.step-number-image-3 {
+  width: 58px;
+  height: 80px;
+  margin-left: 33px;
+}
+
+.abs-1 {
+  right: 16px;
+}
+
+.abs-2 {
+  right: 26px;
+}
+
+.abs-3 {
+  right: 30px;
+}
+
+/* js counter  */
+.count-down {
+  color: white;
+  margin-bottom: 32px;
+}
+
+.container-2 {
+  justify-content: center;
+  display: flex;
+}
+.count {
+  display: flex;
+  text-align: center;
+  font-family: bd-brick, sans-serif;
+  padding: 14px 16px 14px 24px;
+  background-color: rgba(255, 255, 255, 0.103);
+  border-radius: 5px;
+  border: 0;
+}
+
+.count-dots {
+  display: flex;
+  margin: 0 7px 0 2px;
+  padding-bottom: 30px;
+  font-size: 40px;
+  margin-top: -5px;
+}
+
+.container-2 {
+  width: 500px;
+  margin-inline: auto;
+}
+
+.day,
+.hour,
+.minute,
+.seconds {
+  font-family: bd-brick, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 44px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.second-container,
+.minute-container,
+.hour-container,
+.day-container {
+  position: relative;
+}
+
+.day-text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #686b6c;
+}
+/* 
+finish js */
+
+.button-r {
+  height: 48px;
+  width: 151px;
+  border-radius: 8px;
+  padding: 16px 28px 16px 28px;
+  background-color: rgb(247, 205, 40);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+  transition: 0.4s ease-in;
+}
+
+.button-r:hover {
+  box-shadow: 0 0 5px #f7cd28, 0 0 25px #f7cd28, 0 0 50px #f7cd28,
+    0 0 200px #f7cd28;
+}
+
+.extra-0 {
+  left: 0px;
+}
+.extra {
+  left: 2px;
+}
+
+.yellow {
+  color: #f7cd28;
+}
+
+.payments {
+  margin-top: 65px;
+}
+.payments-img {
+  width: 40vw;
+}
+
+.color-second {
+  color: #fed22a;
+}
+
+.bottom-img {
+  width: 48vw;
+}
+
+.top-text-animation-tablet {
+  display: none;
+}
+
+/* TABLET  */
+
+@media only screen and (max-width: 1260px) {
+  .first {
+    display: none;
+  }
+
+  .flex-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .second {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+
+  .marquee p {
+    margin-top: 8px;
+  }
+
+  .logo {
+    margin-bottom: max(10vh, 40px);
+  }
+
+  .payments {
+    margin-top: 2vh;
+  }
+
+  .upper {
+    display: none;
+  }
+
+  .bottom-img {
+    display: none;
+  }
+
+  body {
+    background-image: url("assets/zetcasino_games_2x_desktop_new.webp");
+    height: 100vh;
+    background-size: 105% 105%;
+    animation: shrink 5s infinite alternate;
+  }
+
+  @keyframes shrink {
+    0% {
+      background-size: 105% 105%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+
+  .img-step-lighten {
+    mix-blend-mode: lighten;
+  }
+
+  .top-text-animation-tablet {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-inline: auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+  }
+
+  .delay-tablet {
+    animation: marquee 30s linear infinite !important;
+  }
+
+  .payments-img {
+    width: 80%;
+    display: flex;
+    margin-inline: auto;
+  }
+
+  .button-r {
+    margin-bottom: 2vh;
+  }
+
+  .wrapper {
+    padding-top: 8px;
+  }
+
+  .offer-p {
+    color: rgb(247, 205, 40);
+  }
+}
+/* 
+Second Mobile */
+@media only screen and (max-width: 760px) {
+  .top-text-animation-tablet {
+    width: 100%;
+  }
+
+  .count {
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 5px;
+    border: 0;
+  }
+}
+
+/* Mobile Landscape */
+
+@media only screen and (max-height: 650px) and (orientation: landscape) {
+  .flex-main {
+    justify-content: stretch;
+  }
+
+  .second {
+    height: 210vh;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .logo {
+    margin-bottom: 2px;
+  }
+}
+
+/* 
+ Main Mobile */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("assets/zetcasino_games_2x_mobile (1).webp");
+    height: 100vh;
+    background-size: 105% 105%;
+    animation: shrink 5s infinite alternate;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .marquee p {
+    margin-top: 8px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .step1,
+  .step2,
+  .step3 {
+    flex-direction: column;
+    width: 72px;
+  }
+  .second {
+    overflow-x: hidden;
+  }
+
+  .img-step-lighten {
+    width: 56px;
+    height: 56px;
+  }
+
+  .flex-main {
+    justify-content: stretch;
+  }
+
+  .step-number-image-1,
+  .step-number-image-2,
+  .step-number-image-3 {
+    display: none;
+  }
+
+  .step-p {
+    font-family: Roboto;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    top: 75px;
+  }
+
+  .abs-1 {
+    right: 2px;
+  }
+
+  .abs-2 {
+    right: 0px;
+  }
+
+  .abs-3 {
+    right: 7px;
+  }
+
+  .step1,
+  .step2,
+  .step3 > p {
+    text-align: center;
+  }
+  .steps {
+    margin-bottom: 77px;
+  }
+
+  .main-text-h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .wrapper {
+    font-size: 22px;
+  }
+
+  .payments-img {
+    margin-inline: auto;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .day,
+  .hour,
+  .minute,
+  .seconds {
+    font-size: 40px;
+  }
+  .centred-container {
+    width: 100%;
+  }
+
+  .container-2 {
+    border-radius: 5px;
+  }
+
+  .day-text {
+    color: rgb(153, 153, 153);
+  }
+}
+
+@media only screen and (min-width: 2250px) {
+  .first > .animated-text-3 {
+    max-width: 750px;
+    transform: translate(30%, 50%);
+  }
+
+  .first > .animated-text-2 {
+    max-width: 750px;
+    transform: translate(30%, 50%);
+  }
+
+  .first > .animated-text {
+    max-width: 420px;
+    transform: translate(92%, 50%);
+  }
+  .first > .animated-text-1 {
+    max-width: 620px;
+    transform: translate(46%, 50%);
+  }
+  .bottom-img {
+    height: 250px;
+    margin-left: 40px;
+  }
+
+  .payments {
+    margin-top: max(9vh, 10vh);
+  }
+
+  .logo {
+    margin-top: max(9vh, 10vh);
+  }
+}
