@@ -460,6 +460,12 @@ finish js */
   display: none;
 }
 
+@media only screen and (max-width: 1780px) {
+  .wrapper-2 {
+    font-size: 35px;
+  }
+}
+
 /* TABLET  */
 
 @media only screen and (max-width: 1260px) {
@@ -612,7 +618,7 @@ Second Mobile */
 
   .logo {
     margin-bottom: 15px;
-    margin-top: 15px;
+    height: 152px;
   }
 
   .step1,
