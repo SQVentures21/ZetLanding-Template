@@ -578,7 +578,7 @@ Second Mobile */
 
 /* Mobile Landscape */
 
-@media only screen and (max-height: 650px) and (orientation: landscape) {
+@media only screen and (max-height: 450px) and (orientation: landscape) {
   .flex-main {
     justify-content: stretch;
   }
